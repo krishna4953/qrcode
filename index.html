@@ -1,0 +1,19 @@
+data = """
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test HTML Page</title>
+</head>
+<body>
+    <h1>Welcome to My HTML Page!</h1>
+    <p>This QR code leads to an HTML page encoded directly into it.</p>
+</body>
+</html>
+"""
+
+# Use the same process to add this data into the QR code
+qr.add_data(data)
+qr.make(fit=True)
+
+img = qr.make_image(fill="black", back_color="white")
+img.save("test_html_content.png")
